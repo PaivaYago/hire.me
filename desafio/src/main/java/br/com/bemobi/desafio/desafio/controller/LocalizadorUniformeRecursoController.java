@@ -32,8 +32,6 @@ public class LocalizadorUniformeRecursoController {
 	@RequestMapping(value="shorten", method = RequestMethod.GET)
 	public String encurtar(@RequestParam("url") String url, @RequestParam("alias") String alias) throws JsonProcessingException {
 
-		System.out.println(url);
-		System.out.println(alias);
 		
 		long timeBegin = new Date().getTime();
 
@@ -45,7 +43,6 @@ public class LocalizadorUniformeRecursoController {
 	@RequestMapping(value="{alias}", method = RequestMethod.GET)
 	public ModelAndView recuperar(@PathVariable("alias") String alias){
 		
-		System.out.println(alias);
 		
 			LocalizadorUniformeRecurso url = service.acessarUrl(alias);
 
