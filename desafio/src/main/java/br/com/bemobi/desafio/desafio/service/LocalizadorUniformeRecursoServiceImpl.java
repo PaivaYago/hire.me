@@ -55,7 +55,7 @@ public class LocalizadorUniformeRecursoServiceImpl implements LocalizadorUniform
 				this.update(url);
 
 				dto = new RetornoShortenDTO(url);
-				dto.setTimeTaken(timeTaken(timeBegin));
+				dto.setTimeTaken(this.timeTaken(timeBegin));
 
 				return obj.writeValueAsString(dto);
 
